@@ -32,7 +32,7 @@ if (isset($_POST['update'])) {
             <input type="number" name="stock" value="<?= $livre['nombre_exemplair'] ?>">
             <p>Image actuelle : <?= $livre['image'] ?></p>
             <input type="file" name="image" accept="image/*">
-            [cite_start]<button type="submit" name="update" class="btn">Mettre à jour [cite: 90]</button>
+            <button type="submit" name="update" class="btn">Mettre à jour </button>
         </form>
     </div>
 </body>

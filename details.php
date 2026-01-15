@@ -8,7 +8,7 @@ $livre = $stmt->fetch();
 if (isset($_POST['add_wishlist'])) {
     $stmt = $pdo->prepare("INSERT INTO liste_lecture (id_livre, id_lecteur, date_emprun) VALUES (?, 1, NOW())");
     $stmt->execute([$id]);
-    echo "<script>alert('Ajouté à votre liste ! [cite: 67]');</script>";
+    echo "<script>alert('Ajouté à votre liste ! ');</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -26,10 +26,10 @@ if (isset($_POST['add_wishlist'])) {
                     <p><strong>Éditeur :</strong> <?= htmlspecialchars($livre['maison_edition']) ?></p>
                     <p><strong>Catégorie :</strong> <?= htmlspecialchars($livre['categorie']) ?></p>
                     <p><strong>Description :</strong><br><?= nl2br(htmlspecialchars($livre['description'])) ?></p>
-                    [cite_start]<p><strong>Disponibles :</strong> <?= $livre['nombre_exemplair'] ?> exemplaires [cite: 37]</p>
+                    <p><strong>Disponibles :</strong> <?= $livre['nombre_exemplair'] ?> exemplaires </p>
                     
                     <form method="POST">
-                        [cite_start]<button type="submit" name="add_wishlist" class="btn" style="background:#f39c12;">Ajouter à ma liste de lecture [cite: 67]</button>
+                        <button type="submit" name="add_wishlist" class="btn" style="background:#f39c12;">Ajouter à ma liste de lecture </button>
                     </form>
                 </div>
             </div>

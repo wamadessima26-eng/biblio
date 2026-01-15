@@ -21,13 +21,13 @@ $livres = $pdo->query("SELECT * FROM livres ORDER BY id DESC")->fetchAll();
 <head><title>Admin - Bibliothèque</title><link rel="stylesheet" href="style.css"></head>
 <body>
     <div class="container">
-        [cite_start]<h1>Gestion de la Collection [cite: 52]</h1>
+        <h1>Gestion de la Collection</h1>
         <a href="index.php" class="btn">← Voir le Site</a>
 
         <div class="book-card" style="text-align: left; padding: 20px; margin: 20px 0;">
-            [cite_start]<h3>Ajouter un nouveau livre [cite: 90]</h3>
+            <h3>Ajouter un nouveau livre </h3>
             <form method="POST" enctype="multipart/form-data">
-                [cite_start]<input type="text" name="titre" placeholder="Titre [cite: 37]" required>
+                <input type="text" name="titre" placeholder="Titre " required>
                 <input type="text" name="auteur" placeholder="Auteur" required>
                 <input type="text" name="categorie" placeholder="Catégorie (ex: Roman, Science)">
                 <textarea name="desc" placeholder="Description"></textarea>
@@ -47,7 +47,7 @@ $livres = $pdo->query("SELECT * FROM livres ORDER BY id DESC")->fetchAll();
                 <td><?= htmlspecialchars($l['titre']) ?></td>
                 <td>
                     <a href="edit.php?id=<?= $l['id'] ?>" class="btn">Modifier</a>
-                    [cite_start]<a href="admin.php?del=<?= $l['id'] ?>" class="btn btn-danger" onclick="return confirm('Supprimer ce livre ? [cite: 90]')">Supprimer</a>
+                    <a href="admin.php?del=<?= $l['id'] ?>" class="btn btn-danger" onclick="return confirm('Supprimer ce livre ? ')">Supprimer</a>
                 </td>
             </tr>
             <?php endforeach; ?>

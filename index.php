@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>📚 Bibliothèque en Ligne</h1>
-        <p>Bienvenue ! [cite_start]Cliquez sur une couverture pour voir les détails ou utilisez la barre de recherche. [cite: 58]</p>
+        <p>Bienvenue !Cliquez sur une couverture pour voir les détails ou utilisez la barre de recherche. </p>
         
         <div style="margin-bottom: 30px;">
             <a href="wishlist.php" class="btn btn-nav">Ma Liste de Lecture</a>
@@ -17,7 +17,7 @@
         </div>
 
         <form action="results.php" method="GET" style="margin-bottom: 40px;">
-            [cite_start]<input type="text" name="search" placeholder="Rechercher par titre ou auteur... [cite: 59]" required>
+            <input type="text" name="search" placeholder="Rechercher par titre ou auteur... " required>
             <button type="submit" class="btn">Rechercher</button>
         </form>
 
